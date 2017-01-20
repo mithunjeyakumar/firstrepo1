@@ -1,0 +1,313 @@
+    1  pwd
+    2  cd Desktop/
+    3  mkdir GIThandson
+    4  cd GIThandson/
+    5  git config --global user.name 'mithun'
+    6  git config --global user.email 'jmithun88@gmail.com'
+    7  pwd
+    8  mkdir folder1
+    9  cd folder1/
+   10  touch test1.txt
+   11  notepad test1.txt
+   12  cat test1.txt
+   13  git init
+   14  git config -l
+   15  git status
+   16  git add .
+   17  git status
+   18  git commit -m "first commit"
+   19  git status
+   20  cd ..
+   21  mv folder1 repo1
+   22  ls
+   23  cd repo1/
+   24  ls
+   25  ls -la
+   26  git status
+   27  echo "second line" >> test1.txt
+   28  cat test1.txt
+   29  git status
+   30  cat test1.txt
+   31  git checkout -- test1.txt
+   32  cat test1.txt
+   33  echo "\nsecond line" >> test1.txt
+   34  cat test1.txt
+   35  git checkout -- test1.txt
+   36  cat test1.txt
+   37  echo \n"second line" >> test1.txt
+   38  cat test1.txt
+   39  git checkout -- test1.txt
+   40  git status
+   41  git add .
+   42  git status
+   43  git commit -m "second commit"
+   44  git log
+   45  clear
+   46  ls
+   47  mkdir folder1
+   48  git status
+   49  cd folder1/
+   50  touch file1.txt
+   51  git status
+   52  ls
+   53  cd ..
+   54  git status
+   55  git add .
+   56  git status
+   57  git commit -m "adding new folder and a file"
+   58  git status
+   59  ls
+   60  cd folder1/
+   61  ls
+   62  notepad file1.txt
+   63  git status
+   64  cat file1.txt
+   65  git commit -m "test commit"
+   66  git commit -ma "test commit"
+   67  git commit -am "test commit"
+   68  clear
+   69  ls -la
+   70  cd ..
+   71  ls -la
+   72  cd ..
+   73  ls
+   74  cd repo1/
+   75  ls
+   76  ls -la
+   77  git log
+   78  git lot --oneline
+   79  git log --oneline
+   80  ls
+   81  cat test1.txt
+   82  test >>test1.txt
+   83  cat test1.txt
+   84  ls
+   85  git status
+   86  notepad test1.txt
+   87  git add .
+   88  git commit -m "sample"
+   89  git log --oneline
+   90  ls
+   91  git add .
+   92  git commit -am 'monday'
+   93  git commit -am 'tues'
+   94  git commit -am 'wed'
+   95  git commit -am 'thirs'
+   96  git log --oneline
+   97  git revert HEAD
+   98  git log --oneline
+   99  git revert HEAD~1
+  100  git log --oneline
+  101  git revert HEAD~2
+  102  git log --oneline
+  103  git rest --hard HEAD~2
+  104  git reset --hard HEAD~2
+  105  git log --oneline
+  106  git status
+  107  git revert HEAD~4
+  108  git revert HEAD~2
+  109  git ls -l
+  110  git ls-files -u
+  111  git add .
+  112  git revert --continue
+  113  git log --oneline
+  114  git reset --hard HEAD~2
+  115  git log --oneline
+  116  git status
+  117  touch .gitignore
+  118  ls
+  119  ls -la
+  120  git status
+  121  git status
+  122  git status
+  123  git status
+  124  git status
+  125  git status
+  126  git status
+  127  git status
+  128  git commit -am 'gitgnore file added'
+  129  git stauts
+  130  git status
+  131  git status
+  132  git status
+  133  git status
+  134  git status
+  135  git status
+  136  git status
+  137  git branch
+  138  ls
+  139  git branch
+  140  git log --oneline
+  141  git branch b1 HEAD~2
+  142  git branch
+  143  git branch b1
+  144  cd Desktop/
+  145  cd GIThandson/
+  146  ls
+  147  cd repo1/
+  148  clear
+  149  git branch
+  150  git checkout b1
+  151  ls
+  152  ls -ltr
+  153  git checkout master
+  154  ls -ltr
+  155  git log --oneline
+  156  git checkout b1
+  157  git log --oneline
+  158  git branch master
+  159  git checkout master
+  160  ls
+  161  vi marster.txt
+  162  ls
+  163  git commit -am 'master text file added'
+  164  git add .
+  165  git add .
+  166  git add .
+  167  git add .
+  168  git commit -am 'master text file added'
+  169  git checkout b1
+  170  git checkout master
+  171  git checkout b1
+  172  ls
+  173  git checkout master
+  174  ls
+  175  git log --oneline
+  176  git checkout HEAD~1
+  177  git branch b2
+  178  ls
+  179  git branch
+  180  git checkout master
+  181  git checkout b2
+  182  ls
+  183  git commit -am 'b2 file added'
+  184  git status
+  185  git add .
+  186  git status
+  187  git commit - m"b2 branch created"
+  188  git commit -m "b2 branch created"
+  189  git merge master
+  190  git lot --oneline
+  191  git log --oneline
+  192  git reset --hard HEAD~1
+  193  git status
+  194  git checkout master
+  195  git merge b2
+  196  git log --online --decorate --graph --all
+  197  git log --oneline --decorate --graph --all
+  198  git add .
+  199  git commit -m 'added common file'
+  200  git status
+  201  git log --oneline
+  202  git checkout b1
+  203  git merge master
+  204  git status
+  205*
+  206  git commit -m "common file edited on b1 branch'
+"
+  207  git checkout master
+  208  git log --online --decorate --graph --all
+  209  git log --oneline --decorate --graph --all
+  210  git merge b1
+  211  git add .
+  212  git commit -m 'edited seond time on master branch'
+  213  git checkout b1
+  214  git add .
+  215  git commit -m 'edited common file in b1 inorder to make conflict'
+  216  git checkout master
+  217  git merge b1
+  218  git ls-files -u
+  219  git add .
+  220  git status
+  221  git commit -m 'merging b1 branch to master after resolving conflict'
+  222  git log --oneline --decorate --graph --all
+  223  git log --decorate --graph --all
+  224  git log --oneline --decorate --graph --all
+  225  git checkout b1
+  226  git log --oneline --decorate --graph --all
+  227  git log --oneline
+  228  git ls
+  229  git ls-files
+  230  git ls-dir
+  231  git --help
+  232  clear
+  233  clear
+  234  history
+  235  clear
+  236  git branch
+  237  git checkout master
+  238  git stauts
+  239  git status
+  240  git remote add origin https://github.com/mithunjeyakumar/firstrepo1.git
+  241  git push -u origin master
+  242  git branh -r
+  243  git branch -r
+  244  git branch
+  245  git push -u origin --all
+  246  git branch -r
+  247  git branch testbranch
+  248  git branch -r
+  249  git branch
+  250  git branch testbranch
+  251  git push -u origin testbranch
+  252  git branch -r
+  253  git branch
+  254  git branch -r
+  255  git branch
+  256  ls
+  257  ls
+  258  cat commonfile.txt
+  259  git pull orgin
+  260  git pull origin
+  261  cat commonfile.txt
+  262  git branch -r
+  263  git pull origin --all
+  264  git pull -u origin
+  265  git branch
+  266  git pull origin --all
+  267  git branch -r
+  268  git log --oneline
+  269  git log
+  270  clear
+  271  git push origin --all
+  272  git log --oneline
+  273  git log --oneline --decorate --graph --all
+  274  git log --oneline --decorate --graph origin/master
+  275  git log --oneline --decorate --graph master
+  276  git fetch origin
+  277  git log --oneline --decorate --graph origin/master
+  278  git log --oneline --decorate --graph master
+  279  git branch origin/master
+  280  git diff master
+  281  git branch
+  282  git checkout origin/master
+  283  git branch --help
+  284  git branch
+  285  git branch -help
+  286  git branch -d origin/master
+  287  git checkout master
+  288  git branch -d origin/master
+  289  git branch
+  290  git checkout origin/master
+  291  ls
+  292  cat UI.txt
+  293  git checkout master
+  294  git merge origin/master
+  295  ls
+  296  cat UI.txt
+  297  git status
+  298  git checkout origin/master
+  299  git checkout master
+  300  ls
+  301  rm target/
+  302  rm -rf target/
+  303  rm test.log
+  304  ls
+  305  git status
+  306  git add .
+  307  git commit -m "deleted target and log files"
+  308  git push origin
+  309  git push origin
+  310  clear
+  311  history
+

@@ -1,0 +1,1202 @@
+139@139-PC MINGW64 ~
+$ pwd
+/c/Users/139
+
+139@139-PC MINGW64 ~
+$ cd Desktop/
+
+139@139-PC MINGW64 ~/Desktop
+$ mkdir GIThandson
+
+139@139-PC MINGW64 ~/Desktop
+$ cd GIT
+Git-2.11.0.3-64-bit.exe  GIThandson/
+
+139@139-PC MINGW64 ~/Desktop
+$ cd GIThandson/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson
+$ git config --global user.name 'mithun'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson
+$ git config --global user.email 'jmithun88@gmail.com'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson
+$ pwd
+/c/Users/139/Desktop/GIThandson
+
+139@139-PC MINGW64 ~/Desktop/GIThandson
+$ mkdir folder1
+
+139@139-PC MINGW64 ~/Desktop/GIThandson
+$ cd folder1/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/folder1
+$ touch test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/folder1
+$ notepad test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/folder1
+$ cat test1.txt
+first line
+139@139-PC MINGW64 ~/Desktop/GIThandson/folder1
+$ git init
+Initialized empty Git repository in C:/Users/139/Desktop/GIThandson/folder1/.git/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/folder1 (master)
+$ git config -l
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+diff.astextplain.textconv=astextplain
+rebase.autosquash=true
+user.name=mithun
+user.email=jmithun88@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/folder1 (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        test1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/folder1 (master)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/folder1 (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   test1.txt
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/folder1 (master)
+$ git commit -m "first commit"
+[master (root-commit) 29fa30d] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/folder1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/folder1 (master)
+$ cd ..
+
+139@139-PC MINGW64 ~/Desktop/GIThandson
+$ mv folder1 repo1
+
+139@139-PC MINGW64 ~/Desktop/GIThandson
+$ ls
+repo1/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson
+$ cd repo1/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls -la
+total 5
+drwxr-xr-x 1 139 197121  0 Jan 19 12:17 ./
+drwxr-xr-x 1 139 197121  0 Jan 19 12:25 ../
+drwxr-xr-x 1 139 197121  0 Jan 19 12:22 .git/
+-rw-r--r-- 1 139 197121 10 Jan 19 12:16 test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ echo "second line" >> test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cat test1.txt
+first linesecond line
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   test1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cat test1.txt
+first linesecond line
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout -- test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cat test1.txt
+first line
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ echo "\nsecond line" >> test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cat test1.txt
+first line\nsecond line
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout -- test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cat test1.txt
+first line
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ echo \n"second line" >> test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cat test1.txt
+first linensecond line
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout -- test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   test1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   test1.txt
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -m "second commit"
+[master c248dfa] second commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log
+commit c248dfa3df923d7c34b11017fecc21177248a981
+Author: mithun <jmithun88@gmail.com>
+Date:   Thu Jan 19 12:29:02 2017 +0530
+
+    second commit
+
+commit 29fa30dd1841b8f3c45bd231128a77f7084cb549
+Author: mithun <jmithun88@gmail.com>
+Date:   Thu Jan 19 12:22:35 2017 +0530
+
+    first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ mkdir folder1
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cd folder1/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1/folder1 (master)
+$ touch file1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1/folder1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1/folder1 (master)
+$ ls
+file1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1/folder1 (master)
+$ cd ..
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        folder1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   folder1/file1.txt
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -m "adding new folder and a file"
+[master aaaee2b] adding new folder and a file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 folder1/file1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cd folder1/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1/folder1 (master)
+$ ls
+file1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1/folder1 (master)
+$ notepad file1.txt
+git status
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1/folder1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1/folder1 (master)
+$ cat file1.txt
+ading new line
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1/folder1 (master)
+$ git commit -m "test commit"
+On branch master
+Changes not staged for commit:
+        modified:   file1.txt
+
+no changes added to commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1/folder1 (master)
+$ git commit -ma "test commit"
+error: pathspec 'test commit' did not match any file(s) known to git.
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1/folder1 (master)
+$ git commit -am "test commit"
+[master bfd4dd5] test commit
+ 1 file changed, 1 insertion(+)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1/folder1 (master)
+$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1/folder1 (master)
+$ ls -la
+total 1
+drwxr-xr-x 1 139 197121  0 Jan 19 12:31 ./
+drwxr-xr-x 1 139 197121  0 Jan 19 12:30 ../
+-rw-r--r-- 1 139 197121 14 Jan 19 12:33 file1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1/folder1 (master)
+$ cd ..
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls -la
+total 5
+drwxr-xr-x 1 139 197121  0 Jan 19 12:30 ./
+drwxr-xr-x 1 139 197121  0 Jan 19 12:25 ../
+drwxr-xr-x 1 139 197121  0 Jan 19 12:34 .git/
+drwxr-xr-x 1 139 197121  0 Jan 19 12:31 folder1/
+-rw-r--r-- 1 139 197121 23 Jan 19 12:27 test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cd ..
+
+139@139-PC MINGW64 ~/Desktop/GIThandson
+$ ls
+repo1/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson
+$ cd repo1/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls -la
+total 5
+drwxr-xr-x 1 139 197121  0 Jan 19 12:30 ./
+drwxr-xr-x 1 139 197121  0 Jan 19 12:25 ../
+drwxr-xr-x 1 139 197121  0 Jan 19 12:34 .git/
+drwxr-xr-x 1 139 197121  0 Jan 19 12:31 folder1/
+-rw-r--r-- 1 139 197121 23 Jan 19 12:27 test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log
+commit bfd4dd52a0a95d096475264c02ea7a74edd1035d
+Author: mithun <jmithun88@gmail.com>
+Date:   Thu Jan 19 12:34:25 2017 +0530
+
+    test commit
+
+commit aaaee2b3dd3fb3ad15e5786c983cecf2b1fd4122
+Author: mithun <jmithun88@gmail.com>
+Date:   Thu Jan 19 12:32:32 2017 +0530
+
+    adding new folder and a file
+
+commit c248dfa3df923d7c34b11017fecc21177248a981
+Author: mithun <jmithun88@gmail.com>
+Date:   Thu Jan 19 12:29:02 2017 +0530
+
+    second commit
+
+commit 29fa30dd1841b8f3c45bd231128a77f7084cb549
+Author: mithun <jmithun88@gmail.com>
+Date:   Thu Jan 19 12:22:35 2017 +0530
+
+    first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git lot --oneline
+git: 'lot' is not a git command. See 'git --help'.
+
+Did you mean this?
+        log
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cat test1.txt
+first line
+second line
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ test >>test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cat test1.txt
+first line
+second line
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ notepad test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -m "sample"
+[master b871b45] sample
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -am 'monday'
+[master 089e566] monday
+ 1 file changed, 1 insertion(+)
+ create mode 100644 week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -am 'tues'
+[master dab91a5] tues
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -am 'wed'
+[master 7240425] wed
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -am 'thirs'
+[master f8ada03] thirs
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git revert HEAD
+[master 04bee24] Revert "thirs"
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+04bee24 Revert "thirs"
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git revert HEAD~1
+On branch master
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+04bee24 Revert "thirs"
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git revert HEAD~2
+[master e26a04d] Revert "wed"
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+e26a04d Revert "wed"
+04bee24 Revert "thirs"
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git rest --hard HEAD~2
+git: 'rest' is not a git command. See 'git --help'.
+
+Did you mean this?
+        reset
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git reset --hard HEAD~2
+HEAD is now at f8ada03 thirs
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+
+
+
+
+
+
+
+
+
+
+
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1/folder1 (master)
+$ ls -la
+total 1
+drwxr-xr-x 1 139 197121  0 Jan 19 12:31 ./
+drwxr-xr-x 1 139 197121  0 Jan 19 12:30 ../
+-rw-r--r-- 1 139 197121 14 Jan 19 12:33 file1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1/folder1 (master)
+$ cd ..
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls -la
+total 5
+drwxr-xr-x 1 139 197121  0 Jan 19 12:30 ./
+drwxr-xr-x 1 139 197121  0 Jan 19 12:25 ../
+drwxr-xr-x 1 139 197121  0 Jan 19 12:34 .git/
+drwxr-xr-x 1 139 197121  0 Jan 19 12:31 folder1/
+-rw-r--r-- 1 139 197121 23 Jan 19 12:27 test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cd ..
+
+139@139-PC MINGW64 ~/Desktop/GIThandson
+$ ls
+repo1/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson
+$ cd repo1/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls -la
+total 5
+drwxr-xr-x 1 139 197121  0 Jan 19 12:30 ./
+drwxr-xr-x 1 139 197121  0 Jan 19 12:25 ../
+drwxr-xr-x 1 139 197121  0 Jan 19 12:34 .git/
+drwxr-xr-x 1 139 197121  0 Jan 19 12:31 folder1/
+-rw-r--r-- 1 139 197121 23 Jan 19 12:27 test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log
+commit bfd4dd52a0a95d096475264c02ea7a74edd1035d
+Author: mithun <jmithun88@gmail.com>
+Date:   Thu Jan 19 12:34:25 2017 +0530
+
+    test commit
+
+commit aaaee2b3dd3fb3ad15e5786c983cecf2b1fd4122
+Author: mithun <jmithun88@gmail.com>
+Date:   Thu Jan 19 12:32:32 2017 +0530
+
+    adding new folder and a file
+
+commit c248dfa3df923d7c34b11017fecc21177248a981
+Author: mithun <jmithun88@gmail.com>
+Date:   Thu Jan 19 12:29:02 2017 +0530
+
+    second commit
+
+commit 29fa30dd1841b8f3c45bd231128a77f7084cb549
+Author: mithun <jmithun88@gmail.com>
+Date:   Thu Jan 19 12:22:35 2017 +0530
+
+    first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git lot --oneline
+git: 'lot' is not a git command. See 'git --help'.
+
+Did you mean this?
+        log
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cat test1.txt
+first line
+second line
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ test >>test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cat test1.txt
+first line
+second line
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ notepad test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -m "sample"
+[master b871b45] sample
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  test1.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -am 'monday'
+[master 089e566] monday
+ 1 file changed, 1 insertion(+)
+ create mode 100644 week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -am 'tues'
+[master dab91a5] tues
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -am 'wed'
+[master 7240425] wed
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -am 'thirs'
+[master f8ada03] thirs
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git revert HEAD
+[master 04bee24] Revert "thirs"
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+04bee24 Revert "thirs"
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git revert HEAD~1
+On branch master
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+04bee24 Revert "thirs"
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git revert HEAD~2
+[master e26a04d] Revert "wed"
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+e26a04d Revert "wed"
+04bee24 Revert "thirs"
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git rest --hard HEAD~2
+git: 'rest' is not a git command. See 'git --help'.
+
+Did you mean this?
+        reset
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git reset --hard HEAD~2
+HEAD is now at f8ada03 thirs
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git revert HEAD~4
+[master 3794702] Revert "sample"
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git revert HEAD~2
+error: could not revert 7240425... wed
+hint: after resolving the conflicts, mark the corrected paths
+hint: with 'git add <paths>' or 'git rm <paths>'
+hint: and commit the result with 'git commit'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master|REVERTING)
+$ git ls -l
+git: 'ls' is not a git command. See 'git --help'.
+
+Did you mean this?
+        log
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master|REVERTING)
+$ git ls-files -u
+100644 d7d9a6698ef16c716c4633c1e8e7dc34b59c2dcb 1       week.txt
+100644 f0e2d94c4e2fbd04d4650162420233100d517245 2       week.txt
+100644 a79c95caf53b9d477dbbbbea235f77909c39a04c 3       week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master|REVERTING)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master|REVERTING)
+$ git revert --continue
+[master 925bf78] Revert "wed"
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+925bf78 Revert "wed"
+3794702 Revert "sample"
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git reset --hard HEAD~2
+HEAD is now at f8ada03 thirs
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .log.txt
+        target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ touch .gitignore
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  target/  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls -la
+total 10
+drwxr-xr-x 1 139 197121  0 Jan 19 14:53 ./
+drwxr-xr-x 1 139 197121  0 Jan 19 12:25 ../
+drwxr-xr-x 1 139 197121  0 Jan 19 14:53 .git/
+-rw-r--r-- 1 139 197121  0 Jan 19 14:53 .gitignore
+-rw-r--r-- 1 139 197121  0 Jan 19 14:53 .log.txt
+drwxr-xr-x 1 139 197121  0 Jan 19 12:31 folder1/
+drwxr-xr-x 1 139 197121  0 Jan 19 14:53 target/
+-rw-r--r-- 1 139 197121 35 Jan 19 14:39 test1.txt
+-rw-r--r-- 1 139 197121 21 Jan 19 14:39 week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        .log.txt
+        target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        target/
+        test.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -am 'gitgnore file added'
+On branch master
+Untracked files:
+        .gitignore
+
+nothing added to commit but untracked files present
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git stauts
+git: 'stauts' is not a git command. See 'git --help'.
+
+Did you mean this?
+        status
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        folder1/test/
+        target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        folder1/test/
+        target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch
+* master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch
+* master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch b1 HEAD~2
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch
+  b1
+* master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch b1
+fatal: A branch named 'b1' already exists.
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$

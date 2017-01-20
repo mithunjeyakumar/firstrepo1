@@ -1,0 +1,2019 @@
+139@139-PC MINGW64 ~
+$ cd Desktop/
+
+139@139-PC MINGW64 ~/Desktop
+$ cd GIThandson/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson
+$ ls
+repo1/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson
+$ cd repo1/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ clear
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch
+  b1
+* master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ ls
+folder1/  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ ls -ltr
+total 2
+-rw-r--r-- 1 139 197121 35 Jan 19 14:39 test1.txt
+-rw-r--r-- 1 139 197121  0 Jan 19 14:53 test.log
+drwxr-xr-x 1 139 197121  0 Jan 19 14:53 target/
+drwxr-xr-x 1 139 197121  0 Jan 19 15:01 folder1/
+-rw-r--r-- 1 139 197121  9 Jan 20 09:45 week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git checkout master
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls -ltr
+total 2
+-rw-r--r-- 1 139 197121 35 Jan 19 14:39 test1.txt
+-rw-r--r-- 1 139 197121  0 Jan 19 14:53 test.log
+drwxr-xr-x 1 139 197121  0 Jan 19 14:53 target/
+drwxr-xr-x 1 139 197121  0 Jan 19 15:01 folder1/
+-rw-r--r-- 1 139 197121 21 Jan 20 09:46 week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git log --oneline
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git branch master
+fatal: A branch named 'master' already exists.
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git checkout master
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ vi marster.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  marster.txt  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -am 'master text file added'
+On branch master
+Untracked files:
+        .gitignore
+        marster.txt
+
+nothing added to commit but untracked files present
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+warning: LF will be replaced by CRLF in marster.txt.
+The file will have its original line endings in your working directory.
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+warning: LF will be replaced by CRLF in marster.txt.
+The file will have its original line endings in your working directory.
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -am 'master text file added'
+[master 2b79591] master text file added
+ 2 files changed, 3 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 master.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git checkout master
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ ls
+folder1/  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git checkout master
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  master.txt  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+2b79591 master text file added
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout HEAD~1
+Note: checking out 'HEAD~1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at f8ada03... thirs
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 ((f8ada03...))
+$ git branch b2
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 ((f8ada03...))
+$ ls
+folder1/  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 ((f8ada03...))
+$ git branch
+* (HEAD detached at f8ada03)
+  b1
+  b2
+  master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 ((f8ada03...))
+$ git checkout master
+Previous HEAD position was f8ada03... thirs
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout b2
+Switched to branch 'b2'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ ls
+folder1/  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git commit -am 'b2 file added'
+On branch b2
+Untracked files:
+        b2.txt
+        folder1/test/
+        target/
+        test.log
+
+nothing added to commit but untracked files present
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git status
+On branch b2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        b2.txt
+        folder1/test/
+        target/
+        test.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git status
+On branch b2
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   b2.txt
+        new file:   folder1/test/target/test/test.txt
+        new file:   target/jar.txt
+        new file:   test.log
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git commit - m"b2 branch created"
+error: pathspec '-' did not match any file(s) known to git.
+error: pathspec 'mb2 branch created' did not match any file(s) known to git.
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git commit -m "b2 branch created"
+[b2 ee30edc] b2 branch created
+ 4 files changed, 1 insertion(+)
+ create mode 100644 b2.txt
+ create mode 100644 folder1/test/target/test/test.txt
+ create mode 100644 target/jar.txt
+ create mode 100644 test.log
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git merge master
+Merge made by the 'recursive' strategy.
+ .gitignore | 2 ++
+ master.txt | 1 +
+ 2 files changed, 3 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 master.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git lot --oneline
+git: 'lot' is not a git command. See 'git --help'.
+
+Did you mean this?
+        log
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git log --oneline
+0340c83 Merge branch 'master' into b2
+ee30edc b2 branch created
+2b79591 master text file added
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git reset --hard HEAD~1
+HEAD is now at ee30edc b2 branch created
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git status
+On branch b2
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git checkout master
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git merge b2
+Merge made by the 'recursive' strategy.
+ b2.txt                            | 1 +
+ folder1/test/target/test/test.txt | 0
+ target/jar.txt                    | 0
+ test.log                          | 0
+ 4 files changed, 1 insertion(+)
+ create mode 100644 b2.txt
+ create mode 100644 folder1/test/target/test/test.txt
+ create mode 100644 target/jar.txt
+ create mode 100644 test.log
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+
+
+
+
+
+
+
+139@139-PC MINGW64 ~
+$ cd Desktop/
+
+139@139-PC MINGW64 ~/Desktop
+$ cd GIThandson/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson
+$ ls
+repo1/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson
+$ cd repo1/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ clear
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch
+  b1
+* master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ ls
+folder1/  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ ls -ltr
+total 2
+-rw-r--r-- 1 139 197121 35 Jan 19 14:39 test1.txt
+-rw-r--r-- 1 139 197121  0 Jan 19 14:53 test.log
+drwxr-xr-x 1 139 197121  0 Jan 19 14:53 target/
+drwxr-xr-x 1 139 197121  0 Jan 19 15:01 folder1/
+-rw-r--r-- 1 139 197121  9 Jan 20 09:45 week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git checkout master
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls -ltr
+total 2
+-rw-r--r-- 1 139 197121 35 Jan 19 14:39 test1.txt
+-rw-r--r-- 1 139 197121  0 Jan 19 14:53 test.log
+drwxr-xr-x 1 139 197121  0 Jan 19 14:53 target/
+drwxr-xr-x 1 139 197121  0 Jan 19 15:01 folder1/
+-rw-r--r-- 1 139 197121 21 Jan 20 09:46 week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git log --oneline
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git branch master
+fatal: A branch named 'master' already exists.
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git checkout master
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ vi marster.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  marster.txt  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -am 'master text file added'
+On branch master
+Untracked files:
+        .gitignore
+        marster.txt
+
+nothing added to commit but untracked files present
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+warning: LF will be replaced by CRLF in marster.txt.
+The file will have its original line endings in your working directory.
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+warning: LF will be replaced by CRLF in marster.txt.
+The file will have its original line endings in your working directory.
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -am 'master text file added'
+[master 2b79591] master text file added
+ 2 files changed, 3 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 master.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git checkout master
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ ls
+folder1/  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git checkout master
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+folder1/  master.txt  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+2b79591 master text file added
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout HEAD~1
+Note: checking out 'HEAD~1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at f8ada03... thirs
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 ((f8ada03...))
+$ git branch b2
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 ((f8ada03...))
+$ ls
+folder1/  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 ((f8ada03...))
+$ git branch
+* (HEAD detached at f8ada03)
+  b1
+  b2
+  master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 ((f8ada03...))
+$ git checkout master
+Previous HEAD position was f8ada03... thirs
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout b2
+Switched to branch 'b2'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ ls
+folder1/  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git commit -am 'b2 file added'
+On branch b2
+Untracked files:
+        b2.txt
+        folder1/test/
+        target/
+        test.log
+
+nothing added to commit but untracked files present
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git status
+On branch b2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        b2.txt
+        folder1/test/
+        target/
+        test.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git status
+On branch b2
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   b2.txt
+        new file:   folder1/test/target/test/test.txt
+        new file:   target/jar.txt
+        new file:   test.log
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git commit - m"b2 branch created"
+error: pathspec '-' did not match any file(s) known to git.
+error: pathspec 'mb2 branch created' did not match any file(s) known to git.
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git commit -m "b2 branch created"
+[b2 ee30edc] b2 branch created
+ 4 files changed, 1 insertion(+)
+ create mode 100644 b2.txt
+ create mode 100644 folder1/test/target/test/test.txt
+ create mode 100644 target/jar.txt
+ create mode 100644 test.log
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git merge master
+Merge made by the 'recursive' strategy.
+ .gitignore | 2 ++
+ master.txt | 1 +
+ 2 files changed, 3 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 master.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git lot --oneline
+git: 'lot' is not a git command. See 'git --help'.
+
+Did you mean this?
+        log
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git log --oneline
+0340c83 Merge branch 'master' into b2
+ee30edc b2 branch created
+2b79591 master text file added
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git reset --hard HEAD~1
+HEAD is now at ee30edc b2 branch created
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git status
+On branch b2
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b2)
+$ git checkout master
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git merge b2
+Merge made by the 'recursive' strategy.
+ b2.txt                            | 1 +
+ folder1/test/target/test/test.txt | 0
+ target/jar.txt                    | 0
+ test.log                          | 0
+ 4 files changed, 1 insertion(+)
+ create mode 100644 b2.txt
+ create mode 100644 folder1/test/target/test/test.txt
+ create mode 100644 target/jar.txt
+ create mode 100644 test.log
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --online --decorate --graph --all
+fatal: unrecognized argument: --online
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline --decorate --graph --all
+*   6a251ed (HEAD -> master) Merge branch 'b2'
+|\
+| * ee30edc (b2) b2 branch created
+* | 2b79591 master text file added
+|/
+* f8ada03 thirs
+* 7240425 wed
+* dab91a5 (b1) tues
+* 089e566 monday
+* b871b45 sample
+* bfd4dd5 test commit
+* aaaee2b adding new folder and a file
+* c248dfa second commit
+* 29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -m 'added common file'
+[master 678900e] added common file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 commonfile.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+678900e added common file
+6a251ed Merge branch 'b2'
+ee30edc b2 branch created
+2b79591 master text file added
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git merge master
+Updating dab91a5..678900e
+Fast-forward
+ .gitignore                        | 2 ++
+ b2.txt                            | 1 +
+ commonfile.txt                    | 1 +
+ folder1/test/target/test/test.txt | 0
+ master.txt                        | 1 +
+ target/jar.txt                    | 0
+ test.log                          | 0
+ week.txt                          | 4 +++-
+ 8 files changed, 8 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+ create mode 100644 b2.txt
+ create mode 100644 commonfile.txt
+ create mode 100644 folder1/test/target/test/test.txt
+ create mode 100644 master.txt
+ create mode 100644 target/jar.txt
+ create mode 100644 test.log
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git status
+On branch b1
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git commit -m "common file edited on b1 branch'
+> "
+[b1 b63064b] common file edited on b1 branch'
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git checkout master
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --online --decorate --graph --all
+fatal: unrecognized argument: --online
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline --decorate --graph --all
+* b63064b (b1) common file edited on b1 branch'
+* 678900e (HEAD -> master) added common file
+*   6a251ed Merge branch 'b2'
+|\
+| * ee30edc (b2) b2 branch created
+* | 2b79591 master text file added
+|/
+* f8ada03 thirs
+* 7240425 wed
+* dab91a5 tues
+* 089e566 monday
+* b871b45 sample
+* bfd4dd5 test commit
+* aaaee2b adding new folder and a file
+* c248dfa second commit
+* 29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git merge b1
+Updating 678900e..b63064b
+Fast-forward
+ commonfile.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -m 'edited seond time on master branch'
+[master 2de7888] edited seond time on master branch
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git commit -m 'edited common file in b1 inorder to make conflict'
+[b1 631a737] edited common file in b1 inorder to make conflict
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git checkout master
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git merge b1
+Auto-merging commonfile.txt
+CONFLICT (content): Merge conflict in commonfile.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master|MERGING)
+$ git ls-files -u
+100644 4d9ebd6040723a231cf4ae1d4e6ffd9aacaa1cb8 1       commonfile.txt
+100644 3764300823c7671c61f6e62dc6e406ec5f78a525 2       commonfile.txt
+100644 e70b0567a17e9b52a19608cd317b97b4eb105292 3       commonfile.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master|MERGING)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master|MERGING)
+$ git status
+On branch master
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+        modified:   commonfile.txt
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master|MERGING)
+$ git commit -m 'merging b1 branch to master after resolving conflict'
+[master 848da8f] merging b1 branch to master after resolving conflict
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline --decorate --graph --all
+*   848da8f (HEAD -> master) merging b1 branch to master after resolving conflict
+|\
+| * 631a737 (b1) edited common file in b1 inorder to make conflict
+* | 2de7888 edited seond time on master branch
+|/
+* b63064b common file edited on b1 branch'
+* 678900e added common file
+*   6a251ed Merge branch 'b2'
+|\
+| * ee30edc (b2) b2 branch created
+* | 2b79591 master text file added
+|/
+* f8ada03 thirs
+* 7240425 wed
+* dab91a5 tues
+* 089e566 monday
+* b871b45 sample
+* bfd4dd5 test commit
+* aaaee2b adding new folder and a file
+* c248dfa second commit
+* 29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --decorate --graph --all
+*   commit 848da8f3ff4ec38e6b73401a6e15fbef83e14565 (HEAD -> master)
+|\  Merge: 2de7888 631a737
+| | Author: mithun <jmithun88@gmail.com>
+| | Date:   Fri Jan 20 10:46:02 2017 +0530
+| |
+| |     merging b1 branch to master after resolving conflict
+| |
+| * commit 631a737a4783b835447fe754f17d2ea813adf0e5 (b1)
+| | Author: mithun <jmithun88@gmail.com>
+| | Date:   Fri Jan 20 10:42:13 2017 +0530
+| |
+| |     edited common file in b1 inorder to make conflict
+| |
+* | commit 2de78885edfe4059213ce692da1a789029aebb95
+|/  Author: mithun <jmithun88@gmail.com>
+|   Date:   Fri Jan 20 10:40:38 2017 +0530
+|
+|       edited seond time on master branch
+|
+* commit b63064bc178ba7b503fc598f93bb42b12771eb81
+| Author: mithun <jmithun88@gmail.com>
+| Date:   Fri Jan 20 10:37:27 2017 +0530
+|
+|     common file edited on b1 branch'
+|
+* commit 678900eed52546474f9e487177e5d957e51f06f6
+| Author: mithun <jmithun88@gmail.com>
+| Date:   Fri Jan 20 10:33:50 2017 +0530
+|
+|     added common file
+|
+*   commit 6a251edeb049c7a43700eb76866ecf903c1d898f
+|\  Merge: 2b79591 ee30edc
+| | Author: mithun <jmithun88@gmail.com>
+| | Date:   Fri Jan 20 10:30:43 2017 +0530
+| |
+| |     Merge branch 'b2'
+| |
+| * commit ee30edce63c497e7510dba2f72836b2b7eb5c223 (b2)
+| | Author: mithun <jmithun88@gmail.com>
+| | Date:   Fri Jan 20 10:26:32 2017 +0530
+| |
+| |     b2 branch created
+| |
+* | commit 2b79591a0a8dbf7f2eec0f52ff24d41a724f1db8
+|/  Author: mithun <jmithun88@gmail.com>
+|   Date:   Fri Jan 20 10:12:03 2017 +0530
+|
+|       master text file added
+|
+* commit f8ada03d6e3e4f4bfba706e668a5b899124b0b4f
+| Author: mithun <jmithun88@gmail.com>
+| Date:   Thu Jan 19 14:27:01 2017 +0530
+|
+|     thirs
+|
+* commit 7240425754ab8a3cad05cd148f6232b5a1587d34
+| Author: mithun <jmithun88@gmail.com>
+| Date:   Thu Jan 19 14:26:50 2017 +0530
+|
+|     wed
+|
+* commit dab91a5d259b76169daff422260219399744256d
+| Author: mithun <jmithun88@gmail.com>
+| Date:   Thu Jan 19 14:26:42 2017 +0530
+|
+|     tues
+|
+* commit 089e56658c6c99a81a6baeca299fe8b2bbccfc37
+| Author: mithun <jmithun88@gmail.com>
+| Date:   Thu Jan 19 14:26:25 2017 +0530
+|
+|     monday
+|
+* commit b871b450bbeb3733e4017263197d59daa10054f8
+| Author: mithun <jmithun88@gmail.com>
+| Date:   Thu Jan 19 14:08:47 2017 +0530
+|
+|     sample
+|
+* commit bfd4dd52a0a95d096475264c02ea7a74edd1035d
+| Author: mithun <jmithun88@gmail.com>
+| Date:   Thu Jan 19 12:34:25 2017 +0530
+|
+|     test commit
+|
+* commit aaaee2b3dd3fb3ad15e5786c983cecf2b1fd4122
+| Author: mithun <jmithun88@gmail.com>
+| Date:   Thu Jan 19 12:32:32 2017 +0530
+|
+|     adding new folder and a file
+|
+* commit c248dfa3df923d7c34b11017fecc21177248a981
+| Author: mithun <jmithun88@gmail.com>
+| Date:   Thu Jan 19 12:29:02 2017 +0530
+|
+|     second commit
+|
+* commit 29fa30dd1841b8f3c45bd231128a77f7084cb549
+  Author: mithun <jmithun88@gmail.com>
+  Date:   Thu Jan 19 12:22:35 2017 +0530
+
+      first commit
+
+
+
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git branch
+* b1
+  b2
+  master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (b1)
+$ git checkout master
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git stauts
+git: 'stauts' is not a git command. See 'git --help'.
+
+Did you mean this?
+        status
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git remote add origin https://github.com/mithunjeyakumar/firstrepo1.git
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git push -u origin master
+Username for 'https://github.com': mithunjeyakumar
+Counting objects: 58, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (36/36), done.
+Writing objects: 100% (58/58), 4.29 KiB | 0 bytes/s, done.
+Total 58 (delta 14), reused 0 (delta 0)
+remote: Resolving deltas: 100% (14/14), done.
+Branch master set up to track remote branch master from origin.
+To https://github.com/mithunjeyakumar/firstrepo1.git
+ * [new branch]      master -> master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branh -r
+git: 'branh' is not a git command. See 'git --help'.
+
+Did you mean this?
+        branch
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch -r
+  origin/master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch
+  b1
+  b2
+* master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git push -u origin --all
+Username for 'https://github.com': mithunjeyakumar
+Total 0 (delta 0), reused 0 (delta 0)
+Branch master set up to track remote branch master from origin.
+Branch b1 set up to track remote branch b1 from origin.
+Branch b2 set up to track remote branch b2 from origin.
+To https://github.com/mithunjeyakumar/firstrepo1.git
+ * [new branch]      b1 -> b1
+ * [new branch]      b2 -> b2
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch -r
+  origin/b1
+  origin/b2
+  origin/master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch testbranch
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch -r
+  origin/b1
+  origin/b2
+  origin/master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch
+  b1
+  b2
+* master
+  testbranch
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch testbranch
+fatal: A branch named 'testbranch' already exists.
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git push -u origin testbranch
+Username for 'https://github.com': mithunjeyakumar
+Total 0 (delta 0), reused 0 (delta 0)
+Branch testbranch set up to track remote branch testbranch from origin.
+To https://github.com/mithunjeyakumar/firstrepo1.git
+ * [new branch]      testbranch -> testbranch
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch -r
+  origin/b1
+  origin/b2
+  origin/master
+  origin/testbranch
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch
+  b1
+  b2
+* master
+  testbranch
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch -r
+  origin/b1
+  origin/b2
+  origin/master
+  origin/testbranch
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch
+  b1
+  b2
+* master
+  testbranch
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+b2.txt  commonfile.txt  folder1/  master.txt  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git co
+commit   config
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git co
+commit   config
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+b2.txt  commonfile.txt  folder1/  master.txt  target/  test.log  test1.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cat commonfile.txt
+edited on master branch
+eidted on b1 branch
+edited on mater branch
+edited on b1 branch inorder to make conflict
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git pull orgin
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git pull origin
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/mithunjeyakumar/firstrepo1
+   848da8f..229174a  master     -> origin/master
+Updating 848da8f..229174a
+Fast-forward
+ commonfile.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cat commonfile.txt
+edited on master branch
+eidted on b1 branch
+edited on mater branch
+edited on b1 branch inorder to make conflict
+
+edited form UI
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch -r
+  origin/b1
+  origin/b2
+  origin/master
+  origin/testbranch
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git pull origin --all
+fatal: fetch --all does not take a repository argument
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git pull -u origin
+error: unknown switch `u'
+usage: git pull [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+
+Options related to merging
+    -r, --rebase[=<false|true|preserve|interactive>]
+                          incorporate changes by rebasing rather than merging
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    --edit                edit message before committing
+    --ff                  allow fast-forward
+    --ff-only             abort if fast-forward is not possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    --autostash           automatically stash/stash pop before and after rebase
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+
+Options related to fetching
+    --all                 fetch from all remotes
+    -a, --append          append to .git/FETCH_HEAD instead of overwriting
+    --upload-pack <path>  path to upload pack on remote end
+    -f, --force           force overwrite of local branch
+    -t, --tags            fetch all tags and associated objects
+    -p, --prune           prune remote-tracking branches no longer on remote
+    --recurse-submodules[=<on-demand>]
+                          control recursive fetching of submodules
+    -j, --jobs[=<n>]      number of submodules pulled in parallel
+    --dry-run             dry run
+    -k, --keep            keep downloaded pack
+    --depth <depth>       deepen history of shallow clone
+    --unshallow           convert to a complete repository
+    --update-shallow      accept refs that update .git/shallow
+    --refmap <refmap>     specify fetch refmap
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch
+  b1
+  b2
+* master
+  testbranch
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git pull origin --all
+fatal: fetch --all does not take a repository argument
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch -r
+  origin/b1
+  origin/b2
+  origin/master
+  origin/testbranch
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+229174a Update commonfile.txt
+848da8f merging b1 branch to master after resolving conflict
+631a737 edited common file in b1 inorder to make conflict
+2de7888 edited seond time on master branch
+b63064b common file edited on b1 branch'
+678900e added common file
+6a251ed Merge branch 'b2'
+ee30edc b2 branch created
+2b79591 master text file added
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log
+commit 229174a63ab4afe2be5cfe1cc6ba3bb431d4aff6
+Author: mithunjeyakumar <jmithun88@gmail.com>
+Date:   Fri Jan 20 11:58:02 2017 +0530
+
+    Update commonfile.txt
+
+    updated for GUI
+
+commit 848da8f3ff4ec38e6b73401a6e15fbef83e14565
+Merge: 2de7888 631a737
+Author: mithun <jmithun88@gmail.com>
+Date:   Fri Jan 20 10:46:02 2017 +0530
+
+    merging b1 branch to master after resolving conflict
+
+commit 631a737a4783b835447fe754f17d2ea813adf0e5
+Author: mithun <jmithun88@gmail.com>
+Date:   Fri Jan 20 10:42:13 2017 +0530
+
+    edited common file in b1 inorder to make conflict
+
+commit 2de78885edfe4059213ce692da1a789029aebb95
+Author: mithun <jmithun88@gmail.com>
+Date:   Fri Jan 20 10:40:38 2017 +0530
+
+    edited seond time on master branch
+
+commit b63064bc178ba7b503fc598f93bb42b12771eb81
+Author: mithun <jmithun88@gmail.com>
+Date:   Fri Jan 20 10:37:27 2017 +0530
+
+    common file edited on b1 branch'
+
+commit 678900eed52546474f9e487177e5d957e51f06f6
+Author: mithun <jmithun88@gmail.com>
+Date:   Fri Jan 20 10:33:50 2017 +0530
+
+    added common file
+
+commit 6a251edeb049c7a43700eb76866ecf903c1d898f
+Merge: 2b79591 ee30edc
+Author: mithun <jmithun88@gmail.com>
+Date:   Fri Jan 20 10:30:43 2017 +0530
+
+    Merge branch 'b2'
+
+commit ee30edce63c497e7510dba2f72836b2b7eb5c223
+Author: mithun <jmithun88@gmail.com>
+Date:   Fri Jan 20 10:26:32 2017 +0530
+
+    b2 branch created
+
+commit 2b79591a0a8dbf7f2eec0f52ff24d41a724f1db8
+Author: mithun <jmithun88@gmail.com>
+Date:   Fri Jan 20 10:12:03 2017 +0530
+
+    master text file added
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git push origin --all
+Username for 'https://github.com': mithunjeyakumar
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/mithunjeyakumar/firstrepo1.git
+ * [new branch]      testbranch -> testbranch
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+229174a Update commonfile.txt
+848da8f merging b1 branch to master after resolving conflict
+631a737 edited common file in b1 inorder to make conflict
+2de7888 edited seond time on master branch
+b63064b common file edited on b1 branch'
+678900e added common file
+6a251ed Merge branch 'b2'
+ee30edc b2 branch created
+2b79591 master text file added
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline --decorate --graph --all
+* 229174a (HEAD -> master, origin/master) Update commonfile.txt
+*   848da8f (origin/testbranch, testbranch) merging b1 branch to master after resolving conflict
+|\
+| * 631a737 (origin/b1, b1) edited common file in b1 inorder to make conflict
+* | 2de7888 edited seond time on master branch
+|/
+* b63064b common file edited on b1 branch'
+* 678900e added common file
+*   6a251ed Merge branch 'b2'
+|\
+| * ee30edc (origin/b2, b2) b2 branch created
+* | 2b79591 master text file added
+|/
+* f8ada03 thirs
+* 7240425 wed
+* dab91a5 tues
+* 089e566 monday
+* b871b45 sample
+* bfd4dd5 test commit
+* aaaee2b adding new folder and a file
+* c248dfa second commit
+* 29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline --decorate --graph origin/master
+* 229174a (HEAD -> master, origin/master) Update commonfile.txt
+*   848da8f (origin/testbranch, testbranch) merging b1 branch to master after resolving conflict
+|\
+| * 631a737 (origin/b1, b1) edited common file in b1 inorder to make conflict
+* | 2de7888 edited seond time on master branch
+|/
+* b63064b common file edited on b1 branch'
+* 678900e added common file
+*   6a251ed Merge branch 'b2'
+|\
+| * ee30edc (origin/b2, b2) b2 branch created
+* | 2b79591 master text file added
+|/
+* f8ada03 thirs
+* 7240425 wed
+* dab91a5 tues
+* 089e566 monday
+* b871b45 sample
+* bfd4dd5 test commit
+* aaaee2b adding new folder and a file
+* c248dfa second commit
+* 29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline --decorate --graph master
+* 229174a (HEAD -> master, origin/master) Update commonfile.txt
+*   848da8f (origin/testbranch, testbranch) merging b1 branch to master after resolving conflict
+|\
+| * 631a737 (origin/b1, b1) edited common file in b1 inorder to make conflict
+* | 2de7888 edited seond time on master branch
+|/
+* b63064b common file edited on b1 branch'
+* 678900e added common file
+*   6a251ed Merge branch 'b2'
+|\
+| * ee30edc (origin/b2, b2) b2 branch created
+* | 2b79591 master text file added
+|/
+* f8ada03 thirs
+* 7240425 wed
+* dab91a5 tues
+* 089e566 monday
+* b871b45 sample
+* bfd4dd5 test commit
+* aaaee2b adding new folder and a file
+* c248dfa second commit
+* 29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git fetch origin
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/mithunjeyakumar/firstrepo1
+   229174a..77824a2  master     -> origin/master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline --decorate --graph origin/master
+* 77824a2 (origin/master) UI file created via UI
+* 229174a (HEAD -> master) Update commonfile.txt
+*   848da8f (origin/testbranch, testbranch) merging b1 branch to master after resolving conflict
+|\
+| * 631a737 (origin/b1, b1) edited common file in b1 inorder to make conflict
+* | 2de7888 edited seond time on master branch
+|/
+* b63064b common file edited on b1 branch'
+* 678900e added common file
+*   6a251ed Merge branch 'b2'
+|\
+| * ee30edc (origin/b2, b2) b2 branch created
+* | 2b79591 master text file added
+|/
+* f8ada03 thirs
+* 7240425 wed
+* dab91a5 tues
+* 089e566 monday
+* b871b45 sample
+* bfd4dd5 test commit
+* aaaee2b adding new folder and a file
+* c248dfa second commit
+* 29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline --decorate --graph master
+* 229174a (HEAD -> master) Update commonfile.txt
+*   848da8f (origin/testbranch, testbranch) merging b1 branch to master after resolving conflict
+|\
+| * 631a737 (origin/b1, b1) edited common file in b1 inorder to make conflict
+* | 2de7888 edited seond time on master branch
+|/
+* b63064b common file edited on b1 branch'
+* 678900e added common file
+*   6a251ed Merge branch 'b2'
+|\
+| * ee30edc (origin/b2, b2) b2 branch created
+* | 2b79591 master text file added
+|/
+* f8ada03 thirs
+* 7240425 wed
+* dab91a5 tues
+* 089e566 monday
+* b871b45 sample
+* bfd4dd5 test commit
+* aaaee2b adding new folder and a file
+* c248dfa second commit
+* 29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git push origin --all
+Username for 'https://github.com': mithunjeyakumar
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/mithunjeyakumar/firstrepo1.git
+ * [new branch]      testbranch -> testbranch
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline
+229174a Update commonfile.txt
+848da8f merging b1 branch to master after resolving conflict
+631a737 edited common file in b1 inorder to make conflict
+2de7888 edited seond time on master branch
+b63064b common file edited on b1 branch'
+678900e added common file
+6a251ed Merge branch 'b2'
+ee30edc b2 branch created
+2b79591 master text file added
+f8ada03 thirs
+7240425 wed
+dab91a5 tues
+089e566 monday
+b871b45 sample
+bfd4dd5 test commit
+aaaee2b adding new folder and a file
+c248dfa second commit
+29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline --decorate --graph --all
+* 229174a (HEAD -> master, origin/master) Update commonfile.txt
+*   848da8f (origin/testbranch, testbranch) merging b1 branch to master after resolving conflict
+|\
+| * 631a737 (origin/b1, b1) edited common file in b1 inorder to make conflict
+* | 2de7888 edited seond time on master branch
+|/
+* b63064b common file edited on b1 branch'
+* 678900e added common file
+*   6a251ed Merge branch 'b2'
+|\
+| * ee30edc (origin/b2, b2) b2 branch created
+* | 2b79591 master text file added
+|/
+* f8ada03 thirs
+* 7240425 wed
+* dab91a5 tues
+* 089e566 monday
+* b871b45 sample
+* bfd4dd5 test commit
+* aaaee2b adding new folder and a file
+* c248dfa second commit
+* 29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline --decorate --graph origin/master
+* 229174a (HEAD -> master, origin/master) Update commonfile.txt
+*   848da8f (origin/testbranch, testbranch) merging b1 branch to master after resolving conflict
+|\
+| * 631a737 (origin/b1, b1) edited common file in b1 inorder to make conflict
+* | 2de7888 edited seond time on master branch
+|/
+* b63064b common file edited on b1 branch'
+* 678900e added common file
+*   6a251ed Merge branch 'b2'
+|\
+| * ee30edc (origin/b2, b2) b2 branch created
+* | 2b79591 master text file added
+|/
+* f8ada03 thirs
+* 7240425 wed
+* dab91a5 tues
+* 089e566 monday
+* b871b45 sample
+* bfd4dd5 test commit
+* aaaee2b adding new folder and a file
+* c248dfa second commit
+* 29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline --decorate --graph master
+* 229174a (HEAD -> master, origin/master) Update commonfile.txt
+*   848da8f (origin/testbranch, testbranch) merging b1 branch to master after resolving conflict
+|\
+| * 631a737 (origin/b1, b1) edited common file in b1 inorder to make conflict
+* | 2de7888 edited seond time on master branch
+|/
+* b63064b common file edited on b1 branch'
+* 678900e added common file
+*   6a251ed Merge branch 'b2'
+|\
+| * ee30edc (origin/b2, b2) b2 branch created
+* | 2b79591 master text file added
+|/
+* f8ada03 thirs
+* 7240425 wed
+* dab91a5 tues
+* 089e566 monday
+* b871b45 sample
+* bfd4dd5 test commit
+* aaaee2b adding new folder and a file
+* c248dfa second commit
+* 29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git fetch origin
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/mithunjeyakumar/firstrepo1
+   229174a..77824a2  master     -> origin/master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline --decorate --graph origin/master
+* 77824a2 (origin/master) UI file created via UI
+* 229174a (HEAD -> master) Update commonfile.txt
+*   848da8f (origin/testbranch, testbranch) merging b1 branch to master after resolving conflict
+|\
+| * 631a737 (origin/b1, b1) edited common file in b1 inorder to make conflict
+* | 2de7888 edited seond time on master branch
+|/
+* b63064b common file edited on b1 branch'
+* 678900e added common file
+*   6a251ed Merge branch 'b2'
+|\
+| * ee30edc (origin/b2, b2) b2 branch created
+* | 2b79591 master text file added
+|/
+* f8ada03 thirs
+* 7240425 wed
+* dab91a5 tues
+* 089e566 monday
+* b871b45 sample
+* bfd4dd5 test commit
+* aaaee2b adding new folder and a file
+* c248dfa second commit
+* 29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git log --oneline --decorate --graph master
+* 229174a (HEAD -> master) Update commonfile.txt
+*   848da8f (origin/testbranch, testbranch) merging b1 branch to master after resolving conflict
+|\
+| * 631a737 (origin/b1, b1) edited common file in b1 inorder to make conflict
+* | 2de7888 edited seond time on master branch
+|/
+* b63064b common file edited on b1 branch'
+* 678900e added common file
+*   6a251ed Merge branch 'b2'
+|\
+| * ee30edc (origin/b2, b2) b2 branch created
+* | 2b79591 master text file added
+|/
+* f8ada03 thirs
+* 7240425 wed
+* dab91a5 tues
+* 089e566 monday
+* b871b45 sample
+* bfd4dd5 test commit
+* aaaee2b adding new folder and a file
+* c248dfa second commit
+* 29fa30d first commit
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch origin/master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git diff master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch
+  b1
+  b2
+* master
+  origin/master
+  testbranch
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout origin/master
+warning: refname 'origin/master' is ambiguous.
+Switched to branch 'origin/master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (origin/master)
+$ git branch --help
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (origin/master)
+$ git branch
+  b1
+  b2
+  master
+* origin/master
+  testbranch
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (origin/master)
+$ git branch -help
+usage: git branch [<options>] [-r | -a] [--merged | --no-merged]
+   or: git branch [<options>] [-l] [-f] <branch-name> [<start-point>]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track           set up tracking mode (see git-pull(1))
+    --set-upstream        change upstream info
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      Unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --abbrev[=<n>]        use <n> digits to display SHA-1s
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    --list                list branch names
+    -l, --create-reflog   create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (origin/master)
+$ git branch -d origin/master
+error: Cannot delete branch 'origin/master' checked out at 'C:/Users/139/Desktop/GIThandson/repo1'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (origin/master)
+$ git checkout master
+Your branch is behind 'remotes/origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch -d origin/master
+Deleted branch origin/master (was 229174a).
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git branch
+  b1
+  b2
+* master
+  testbranch
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout origin/master
+Note: checking out 'origin/master'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 77824a2... UI file created via UI
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 ((77824a2...))
+$ ls
+b2.txt  commonfile.txt  folder1/  master.txt  target/  test.log  test1.txt  UI.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 ((77824a2...))
+$ cat UI.txt
+file created on UI
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 ((77824a2...))
+$ git checkout master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Previous HEAD position was 77824a2... UI file created via UI
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cat
+.git/           b2.txt          folder1/        target/         test1.txt
+.gitignore      commonfile.txt  master.txt      test.log        week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cat
+.git/           b2.txt          folder1/        target/         test1.txt
+.gitignore      commonfile.txt  master.txt      test.log        week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git merge origin/master
+Updating 229174a..77824a2
+Fast-forward
+ UI.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 UI.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+b2.txt  commonfile.txt  folder1/  master.txt  target/  test.log  test1.txt  UI.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ cat UI.txt
+file created on UI
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git checkout origin/master
+Note: checking out 'origin/master'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 77824a2... UI file created via UI
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 ((77824a2...))
+$ git checkout master
+Your branch is up-to-date with 'origin/master'.
+Switched to branch 'master'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+b2.txt  commonfile.txt  folder1/  master.txt  target/  test.log  test1.txt  UI.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ rm target/
+rm: cannot remove 'target/': Is a directory
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ rm -rf target/
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ rm test.log
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ ls
+b2.txt  commonfile.txt  folder1/  master.txt  test1.txt  UI.txt  week.txt
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    target/jar.txt
+        deleted:    test.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git add .
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git commit -m "deleted target and log files"
+[master d5b992f] deleted target and log files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 target/jar.txt
+ delete mode 100644 test.log
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git push origin
+Username for 'https://github.com': mitunjeyakumar
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/mithunjeyakumar/firstrepo1.git/'
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$ git push origin
+Username for 'https://github.com': mithunjeyakumar
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 229 bytes | 0 bytes/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/mithunjeyakumar/firstrepo1.git
+   77824a2..d5b992f  master -> master
+
+139@139-PC MINGW64 ~/Desktop/GIThandson/repo1 (master)
+$
+
+
+
+
+
+
+
+
+
